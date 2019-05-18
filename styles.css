@@ -1,0 +1,362 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    color: #fff; 
+    background-image: url("https://media3.giphy.com/media/RHIKETUlUINYvV7CAO/giphy.gif"), url("https://media1.giphy.com/media/nCi1cAiF4eApO/giphy.gif");
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; 
+    background: rgb(2,0,36);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(2,0,36,1)), color-stop(54%, rgba(9,10,121,1)), to(rgba(152,0,255,1)));
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,10,121,1) 54%, rgba(152,0,255,1) 100%);
+}
+
+.logo {
+    position: relative;
+    height: 50px;
+    top: 20px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vw;
+    z-index: 6;
+}
+
+.win_popup {
+    background-color: rgba(160, 157, 157, 0.527);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; 
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    position: absolute;
+    top: 20%;
+    left: 22%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 10;
+    margin-top: 50px;
+}
+
+.start_popup { 
+    background-color:  rgba(160, 157, 157, 0.527);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; 
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+    height: 50%;
+    padding: 40px;
+    border-radius: 10px; 
+    margin-top: 100px;
+    z-index: 3;
+}
+
+.timer_section {
+    font-family: 'Orbitron', sans-serif;
+}
+
+  
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    -webkit-box-pack: justify; 
+        -ms-flex-pack: justify; 
+            justify-content: space-between;
+    width: 100%;
+    margin: 10px 10px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    height: 100%;
+}
+
+button { 
+    background-color: purple;
+    -webkit-box-shadow: 3px 2px rgb(68, 0, 68);
+            box-shadow: 3px 2px rgb(68, 0, 68);
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    font-family: "Orbitron", sans-serif;
+    z-index: 15;
+}
+
+
+p {
+    font-family: "Armata", sans-serif;
+}
+
+.timer_section { 
+    padding-top: 5px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.hide {
+    display: none;
+}
+
+#card_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 5;
+}
+
+.card {
+    position: relative;
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.card, .cardBack, .cardFront, .card image  {
+    height: 100px;
+    width: 100px;
+}
+
+.cardBack, .cardFront {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    -webkit-filter: drop-shadow(20px 20px 5px black);
+            filter: drop-shadow(20px 20px 5px black);
+    border: 2px solid gold;
+    border-radius: 50%;
+}
+
+.cardFront {
+    z-index: 2;
+    background-image: url("/images/zodiac.png");
+    background-size: 100px 100px;
+}
+
+.cardBack {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+.selected {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+.match .cardFront {
+    background-image: none !important;
+    border: none !important;
+    z-index: 1 !important;
+}
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.755, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.755, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+  .scale-up-ver-top {
+	-webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-ver-top {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+  @keyframes scale-up-ver-top {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+  
+@media only screen and (min-width: 640px) {
+
+    .card, .cardBack, .cardFront, .card image  {
+        height: 125px;
+        width: 125px;
+    }
+
+    .card {
+        margin: 10px;
+    }
+
+    .cardFront {
+        background-size: 125px 125px;
+    }
+
+    .grid {
+        width: 80%;
+    }   
+
+    .start_popup { 
+        font-size: 36px;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .win_popup {  
+        font-size: 36px;
+        padding: 40px;
+    }
+
+    .logo {
+        height: 100px;
+    }
+
+} 
+
+ @media only screen and (min-width: 1060px) {
+
+    .card, .cardBack, .cardFront, .card image  {
+        height: 150px;
+        width: 150px;
+    }
+
+    .card {
+        margin: 20px;
+    }
+
+    .cardFront {
+        background-size: 150px 150px;
+    }
+
+    .grid {
+        width: 60%;
+    }
+
+    main {
+        position: relative;
+    }
+
+}  
+
+@media only screen and (min-width: 1374px) {
+    .grid {
+        width: 50%;
+    }
+}
